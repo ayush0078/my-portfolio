@@ -7,6 +7,7 @@
   --primary-light-grey: #f4f4f4;
   --primary-grey: #ccd1d9;
   --primary-dark-grey: #666666;
+  --primary-black: #000000;
 }
 
 body {
@@ -295,5 +296,103 @@ nav ul li {
     float: none;
     direction: ltr;
     width: 100%;
+  }
+}
+
+/************************************ PROJECTS ****************************************************/
+
+.project-wrapper {
+  background: var(--primary-white);
+  padding: 3rem 0;
+}
+
+.project-wrapper h1 {
+  color: var(--primary-blue);
+}
+
+.project-image {
+  width: 15rem;
+  height: 8rem;
+  border: 1px solid var(--primary-blue);
+  padding: 0 0.5rem;
+}
+
+.project-image-box {
+  position: relative;
+  margin: 1rem;
+}
+
+/*---------------- OVERFLOW BOX---------------------*/
+
+.overflow {
+  position: absolute;
+  opacity: 0;
+  background: var(--primary-black);
+  width: 15rem;
+  height: 8rem;
+  top: 0;
+  border: 1px solid var(--primary-blue);
+  cursor: pointer;
+}
+
+.project-image-box:hover .overflow {
+  opacity: 60%;
+  transition: 0.3s ease-in-out;
+}
+
+.project-icon {
+  position: absolute;
+  opacity: 0;
+  margin-left: -8rem;
+  margin-top: 3.6rem;
+  color: var(--primary-blue);
+  font-size: 1.5rem;
+}
+
+.project-image-box:hover .project-icon {
+  opacity: 70%;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/*---------------- OVERFLOW BOX---------------------*/
+
+.project-image-popupbox {
+  width: 45rem;
+  padding: 0 0.5rem;
+}
+
+.hyper-link {
+  cursor: pointer;
+  color: lightsalmon;
+}
+
+.hyper-link:hover {
+  color: var(--primary-blue);
+}
+
+/*---------------- MEDIA ---------------------*/
+
+@media (max-width: 768px) {
+  .project-image-popupbox {
+    width: 100%;
+  }
+}
+
+@media (max-height: 570px) {
+  .popupbox-wrapper {
+    height: 100%;
+  }
+  .project-image-popupbox {
+    width: 60%;
+  }
+}
+
+@media (max-height: 280px) {
+  .popupbox-wrapper {
+    height: 90%;
+  }
+  .project-image-popupbox {
+    width: 30%;
   }
 }

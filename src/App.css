@@ -9,6 +9,7 @@
   --primary-grey: #ccd1d9;
   --primary-dark-grey: #666666;
   --primary-black: #000000;
+  --primary-d: rgba(225, 225, 225, 0);
 }
 
 body {
@@ -41,7 +42,7 @@ nav ul li {
   margin-right: 0.75rem;
   margin-right: 0.75rem;
   color: var(--primary-white) !important;
-  border-top: 0.1875rem solid var(--primary-dark);
+  border-top: 0.1875rem solid var(--primary-d);
 }
 
 .navbar-nav {
@@ -61,7 +62,7 @@ nav ul li {
 }
 
 .navbar-nav > li > a.active,
-.navbar-nav > li > a.active:focus {
+.navbar-nav > li > a:focus {
   border-top: 0.1875rem solid var(--primary-blue);
 }
 
@@ -76,7 +77,7 @@ nav ul li {
   background: url(charles-deluvio-Lks7vei-eAg-unsplash.jpg);
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  height: 100vh;
 }
 
 .main-info {
@@ -356,6 +357,10 @@ nav ul li {
   cursor: pointer;
 }
 
+.popupbox-wrapper {
+  margin-top: 8rem;
+}
+
 /*---------------- OVERFLOW BOX---------------------*/
 
 .project-image-popupbox {
@@ -383,9 +388,10 @@ nav ul li {
 @media (max-height: 570px) {
   .popupbox-wrapper {
     height: 100%;
+    margin-top: 13rem;
   }
   .project-image-popupbox {
-    width: 60%;
+    width: 30%;
   }
 }
 
@@ -511,5 +517,45 @@ textarea.form-control {
 
   .contacts p {
     padding: 0 0.4rem;
+  }
+}
+
+/************************************ FOOTER ****************************************************/
+
+.footer {
+  background: var(--primary-black);
+  color: var(--primary-dark-grey);
+  padding: 3rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--primary-dark-grey);
+}
+
+.footer a:hover {
+  text-decoration: none;
+  color: var(--primary-blue);
+  cursor: pointer;
+}
+
+.footer p {
+  margin-bottom: 0;
+}
+
+.footer-copyright {
+  margin-top: 1rem;
+}
+
+/*---------------- MEDIA ---------------------*/
+@media (max-width: 768px) {
+  .footer-icons {
+    margin-top: 2rem;
+  }
+  .footer-nav-home-to-experience {
+    padding-top: 1rem;
+  }
+  .footer-nav-projects-to-contact {
+    padding-top: 1rem;
   }
 }

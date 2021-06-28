@@ -3,7 +3,8 @@
 :root {
   --primary-white: #fff;
   --primary-blue: #71c9ce;
-  --primary-dark: rgba(255, 255, 255, 0);
+  --primary-dark: #353943;
+  --primary-green: green;
   --primary-light-grey: #f4f4f4;
   --primary-grey: #ccd1d9;
   --primary-dark-grey: #666666;
@@ -313,7 +314,7 @@ nav ul li {
 .project-image {
   width: 15rem;
   height: 8rem;
-  border: 1px solid var(--primary-blue);
+  border: 1px solid var(--primary-black);
   padding: 0 0.5rem;
 }
 
@@ -394,5 +395,121 @@ nav ul li {
   }
   .project-image-popupbox {
     width: 30%;
+  }
+}
+
+/************************************ CONTACTS ****************************************************/
+
+.contacts {
+  background: var(--primary-dark);
+  padding: 3rem 0;
+}
+
+.contacts h1 {
+  color: var(--primary-blue);
+  padding: 1.3rem 0;
+  text-transform: uppercase;
+}
+
+.contacts p {
+  color: var(--primary-light-grey);
+  font-size: 1.2rem;
+}
+
+/*---------------- INPUT AND TEXTAREA ---------------------*/
+
+.contacts input,
+.contacts textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: none;
+  resize: none;
+  border: 0;
+  border-bottom: 0.125rem solid var(--primary-dark-grey);
+  border-radius: 0;
+  color: var(--primary-grey);
+  outline: 0 !important;
+  box-shadow: none !important;
+  margin-bottom: 1rem;
+  padding-left: 0 !important;
+}
+
+.contacts .container {
+  padding: 4rem 0;
+}
+
+.contacts input:focus,
+.contacts textarea:focus {
+  background: transparent;
+  color: var(--primary-white);
+  border-bottom: 0.125rem solid var(--primary-dark-grey);
+}
+
+.contacts textarea {
+  height: 12.2rem !important;
+}
+
+.contact-btn {
+  margin: 1rem 0 0 0;
+  width: 100%;
+  height: auto;
+  background: none;
+  border-color: var(--primary-blue);
+  color: var(--primary-white);
+  text-transform: uppercase;
+  height: 15%;
+}
+
+.contact-btn:hover {
+  background: var(--primary-blue);
+}
+
+.line {
+  position: relative;
+  top: -0.8rem;
+  width: 0;
+  height: 0.125rem;
+  background: var(--primary-blue);
+  display: inline-block;
+}
+
+input:focus + .line,
+textarea:focus + .line {
+  width: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+input.form-control {
+  margin: -0.3rem 0;
+}
+
+textarea.form-control {
+  margin: -0.3rem 0;
+}
+
+.error-message {
+  color: var(--primary-white);
+  background: red;
+  text-align: left;
+}
+
+.success-message {
+  font-weight: 900;
+  color: var(--primary-green);
+}
+
+/*---------------- MEDIA ---------------------*/
+
+@media (max-width: 768px) {
+  .contacts {
+    overflow-x: hidden;
+  }
+
+  .contacts .container {
+    padding: 0 1rem;
+  }
+
+  .contacts p {
+    padding: 0 0.4rem;
   }
 }
